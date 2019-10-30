@@ -12,7 +12,7 @@ public class MenuScript : MonoBehaviour {
 		Application.Quit ();
 	}
 	public void LoadNextLevel(){
-		SceneManager.LoadScene (Application.loadedLevel + 1);
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }
 
