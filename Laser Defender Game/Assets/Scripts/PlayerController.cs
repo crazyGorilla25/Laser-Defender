@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 	public float speed;
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour {
 		AudioSource.PlayClipAtPoint(fire,transform.position);
 	}
 	void Die(){
-		Application.LoadLevel("Win");
+        SceneManager.LoadScene("Win");
 		Destroy (this.gameObject);
 	}
 	void Update(){
